@@ -1,5 +1,5 @@
 # PHP-functions
-PHP 100 most useful functions
+PHP 100 most useful functions, code examples.
 ********************************
 
 
