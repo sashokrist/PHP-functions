@@ -90,20 +90,9 @@
             ?>
         </div>
         <div class="mb-6">
-            <h4>explode() - check if the value is into array first parameter is the the value to check, second parameter is the array where to check, third parameter strict check the data type</h4>
+            <h4>explode() - Returns an array of strings, each of which is a substring of string formed by splitting it on boundaries formed by the string separator.</h4>
             <?php
-            $array = array(12.5, 'one', 'box', 100, 'dog');
-            echo (" array(12.5, 'one', 'box', 100, 'dog')<br>if (in_array('12.5', $array, true)){
-                echo 'the value is found';
-            } else{
-                echo 'value is not found';
-            }<br>");
-            //******************
-            if (in_array('12.5', $array, true)){
-                echo 'the value is found';
-            } else{
-                echo 'the value is not found';
-            }
+
             ?>
         </div>
     </div>
