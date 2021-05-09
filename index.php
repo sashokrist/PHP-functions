@@ -159,6 +159,46 @@
                 echo "The string '$findme' was found in the string '$mystring'";
                 echo " and exists at position $pos";
             }
+            echo ('<br>echo strpos("I love , I love php too!","too");<br>');
+            echo strpos("I love , I love php too!","too");
+            ?>
+        </div>
+        <div class="mb-6">
+            <h4>preg_match() — Perform a regular expression match</h4>
+            <?php
+            echo('Use a regular expression to do a case-insensitive search for "Sasho" in a string: return boolean 0 or 1<br>
+            $str = "Sasho is learning php functions";<br>
+            $pattern = "/w3schools/i";<br>
+            echo preg_match($pattern, $str)<br>');
+            $str = "Sasho is learning php functions";
+            $pattern = "/Sasho/i";
+            echo ('Result: '.preg_match($pattern, $str, $match).'<br>');
+            print_r($match);
+            ?>
+        </div>
+        <div class="mb-6">
+            <h4>sprintf() — Return a formatted string</h4>
+            <?php
+            echo('Replace the percent (%) sign by a variable passed as an argument:<br>
+            $number = 100;<br>
+            $str = "dollars";<br>
+            sprintf("There are %u %s in my pocket.",$number,$str)<br>');
+            $number = 100;
+            $str = "dollars";
+            $txt = sprintf("There are %u %s in my pocket.",$number,$str);
+            echo ('Result: '.$txt);
+            ?>
+        </div>
+        <div class="mb-6">
+            <h4>trim() — Strip whitespace (or other characters) from the beginning and end of a string</h4>
+            <?php
+            echo('Remove characters from both sides of a string ("He" in "Hello" and "d!" in "World"):<br>
+            $str = "Hello World!";<br>
+            echo $str . "<br>";
+            echo trim($str,"Hed!");<br>');
+            $str = "Hello World!";
+            echo $str . "<br>";
+            echo trim($str,"Hed!");
             ?>
         </div>
     </div>
