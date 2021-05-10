@@ -257,7 +257,155 @@
             echo preg_replace($pattern, 'PHP', $str);
             ?>
         </div>
+        <div class="mb-6">
+            <h4>file_get_contents — Reads entire file into a string</h4>
+            <?php
+            echo 'This is a test file<br>
+            PHP function file_get_contents<br>
+            Learn PHP functions<br>
+            echo file_get_contents(test.txt)<br>;
+            $section = file_get_contents(./test.txt, FALSE, NULL, 10, 2);
+            var_dump($section);<br>';
+            echo file_get_contents("test.txt");
+            echo ('<br>');
+            $section = file_get_contents('./test.txt', FALSE, NULL, 10, 2);
+            var_dump($section);
+            ?>
+        </div>
+        <div class="mb-6">
+            <h4>array_key_exists() — Checks if the given key or index exists in the array. Check if the key 1 exists in an array:</h4>
+            <p>
+                $a=array(1=>"one",2=>"two");<br>
+                if (array_key_exists(1,$a))<br>
+                {<br>
+                echo "Key exists!";<br>
+                }<br>
+                else<br>
+                {<br>
+                echo "Key does not exist!";<br>
+                }
+            </p><br>
+            <?php
+            $a=array(1=>"one",2=>"two");
+            if (array_key_exists(1,$a))
+            {
+                echo "Key exists!";
+            }
+            else
+            {
+                echo "Key does not exist!";
+            }
+            ?>
+        </div>
+        <div class="mb-6">
+            <h4>array_keys() — Return all the keys or a subset of the keys of an array.<br>Return an array containing the keys:</h4>
+            <p>
+                $a=array("Volvo"=>"XC90","BMW"=>"X5","Toyota"=>"Highlander");<br>
+                print_r(array_keys($a));<br>
+            </p>
 
+        <?php
+        $a=array("Volvo"=>"XC90","BMW"=>"X5","Toyota"=>"Highlander");
+        print_r(array_keys($a));
+        ?>
+        </div>
+        <div class="mb-6">
+            <h4>dirname() — Returns a parent directory's path</h4>
+            <p>
+                echo dirname("c:/xampp/php-functions/index.php") . "<br />";<br>
+            </p>
+            <?php
+            echo dirname("c:/xampp/php-functions/index.php") . "<br />";
+            ?>
+        </div>
+        <div class="mb-6">
+            <h4>function_exists() — Return true if the given function has been defined</h4>
+            <p>
+                count($array);<br>
+                if (function_exists('count')) {<br>
+                echo "count functions are available.<br />
+                } else {<br>
+                echo "count functions are not available.<br />
+                }
+            </p>
+            <?php
+            count($array);
+            if (function_exists('count')) {
+                echo "count functions are available.<br />\n";
+            } else {
+                echo "count functions are not available.<br />\n";
+            }
+            ?>
+        </div>
+        <div class="mb-6">
+            <h4>is_object — Finds whether a variable is an object</h4>
+            <p>
+                function get_cars($obj) {<br>
+                    if (!is_object($obj)) {<br>
+                        return false;<br>
+                    }<br>
+                    return $obj->cars;<br>
+                }<br>
+                $obj = new stdClass();<br>
+                $obj->cars = array("Volvo", "BMW", "Audi");<br>
+                var_dump(get_cars(null));<br>
+                echo "<br>";
+                var_dump(get_cars($obj));<br>
+            </p>
+            <?php
+            function get_cars($obj) {
+                if (!is_object($obj)) {
+                    return false;
+                }
+                return $obj->cars;
+            }
+
+            $obj = new stdClass();
+            $obj->cars = array("Volvo", "BMW", "Audi");
+
+            var_dump(get_cars(null));
+            echo "<br>";
+            var_dump(get_cars($obj));
+            ?>
+        </div>
+        <div class="mb-6">
+            <h4>json_encode — Returns the JSON representation of a value. How to encode an associative array into a JSON object:</h4>
+            <p>
+                $age = array("Peter"=>35, "Ben"=>37, "Joe"=>43);<br>
+                echo json_encode($age);
+            </p>
+            <?php
+            $age = array("Peter"=>35, "Ben"=>37, "Joe"=>43);
+            echo json_encode($age);
+            ?>
+        </div>
+        <div class="mb-6">
+            <h4>json_decodect() :Store JSON data in a PHP variable, and then decode it into a PHP object:;</h4>
+            <p>
+                $jsonobj = '{"Peter":35,"Ben":37,"Joe":43}';<br>
+                var_dump(json_decode($jsonobj));<br>
+            </p>
+            <?php
+            $jsonobj = '{"Peter":35,"Ben":37,"Joe":43}';
+            var_dump(json_decode($jsonobj));
+            ?>
+        </div>
+        <div class="mb-6">
+            <h4>header — Send a raw HTTP header</h4>
+            <p>
+                Send three HTTP headers to prevent page caching:<br>
+                // Date in the past<br>
+                header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");<br>
+                header("Cache-Control: no-cache");<br>
+                header("Pragma: no-cache");<br>
+
+                <html>
+                <body>
+                ...
+                ...
+            </p>
+
+        </div>
     </div>
 </main>
 </body>
