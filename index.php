@@ -183,9 +183,10 @@
             $number = 100;<br>
             $str = "dollars";<br>
             sprintf("There are %u %s in my pocket.",$number,$str)<br>');
+            $format = "There are %u %s in my pocket.";
             $number = 100;
             $str = "dollars";
-            $txt = sprintf("There are %u %s in my pocket.",$number,$str);
+            $txt = sprintf($format,$number,$str);
             echo ('Result: '.$txt);
             ?>
         </div>
@@ -195,12 +196,68 @@
             echo('Remove characters from both sides of a string ("He" in "Hello" and "d!" in "World"):<br>
             $str = "Hello World!";<br>
             echo $str . "<br>";
-            echo trim($str,"Hed!");<br>');
+            echo trim($str,"Hd!");<br>');
             $str = "Hello World!";
             echo $str . "<br>";
-            echo trim($str,"Hed!");
+            echo trim($str,"Hd!");
             ?>
         </div>
+        <div class="mb-6">
+            <h4>strtolower() — Make a string lowercase</h4>
+            <?php
+           $text = 'SASHO';
+           echo ($text.'<br>');
+            echo strtolower($text);
+            ?>
+        </div>
+        <div class="mb-6">
+            <h4>file_exists() — Checks whether a file or directory exists</h4>
+            <?php
+            $file = 'D:\Pictures\liza.jpg';
+            if (file_exists($file)){
+                echo 'file exists';
+            } else{
+                echo 'file not exists';
+            }
+            ?>
+        </div>
+        <div class="mb-6">
+            <h4>is_string — Find whether the type of a variable is string return boolean</h4>
+            <?php
+            $a = "Hello";
+            echo "a is " . is_string($a) . "<br>";
+
+            $b = 0;
+            echo "b is " . is_string($b) . "<br>";
+
+            $c = 32;
+            echo "c is " . is_string($c) . "<br>";
+
+            $d = "32";
+            echo "d is " . is_string($d) . "<br>";
+
+            $e = true;
+            echo "e is " . is_string($e) . "<br>";
+
+            $f = "null";
+            echo "f is " . is_string($f) . "<br>";
+
+            $g = "";
+            echo "g is " . is_string($g) . "<br>";
+            ?>
+        </div>
+        <div class="mb-6">
+            <h4>preg_replace() — Perform a regular expression search and replace</h4>
+            <?php
+            echo (' $str = "Learn Java";<br>
+             $pattern = "/Java/i";<br>
+             preg_replace($pattern, "PHP", $str);<br>');
+            $str = "Learn Java";
+            $pattern = "/Java/i";
+            echo preg_replace($pattern, 'PHP', $str);
+            ?>
+        </div>
+
     </div>
 </main>
 </body>
